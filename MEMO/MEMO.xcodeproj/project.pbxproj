@@ -14,6 +14,10 @@
 		1564C2D924210D400079ED1C /* MEMO.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1564C2D724210D400079ED1C /* MEMO.xcdatamodeld */; };
 		1564C2DB24210D410079ED1C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1564C2DA24210D410079ED1C /* Assets.xcassets */; };
 		1564C2DE24210D410079ED1C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1564C2DC24210D410079ED1C /* LaunchScreen.storyboard */; };
+		159CB18F242380AE004D2C39 /* MemoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 159CB18E242380AE004D2C39 /* MemoTableViewController.swift */; };
+		159CB19224238357004D2C39 /* Memo+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 159CB19024238357004D2C39 /* Memo+CoreDataClass.swift */; };
+		159CB19324238357004D2C39 /* Memo+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 159CB19124238357004D2C39 /* Memo+CoreDataProperties.swift */; };
+		159CB19624238414004D2C39 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 159CB19524238414004D2C39 /* CoreDataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,10 @@
 		1564C2DA24210D410079ED1C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1564C2DD24210D410079ED1C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1564C2DF24210D410079ED1C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		159CB18E242380AE004D2C39 /* MemoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoTableViewController.swift; sourceTree = "<group>"; };
+		159CB19024238357004D2C39 /* Memo+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Memo+CoreDataClass.swift"; sourceTree = "<group>"; };
+		159CB19124238357004D2C39 /* Memo+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Memo+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		159CB19524238414004D2C39 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +66,7 @@
 		1564C2CD24210D400079ED1C /* MEMO */ = {
 			isa = PBXGroup;
 			children = (
+				159CB194242383DB004D2C39 /* CoreData */,
 				1564C2CE24210D400079ED1C /* AppDelegate.swift */,
 				1564C2D024210D400079ED1C /* SceneDelegate.swift */,
 				1564C2D224210D400079ED1C /* ViewController.swift */,
@@ -65,9 +74,20 @@
 				1564C2DA24210D410079ED1C /* Assets.xcassets */,
 				1564C2DC24210D410079ED1C /* LaunchScreen.storyboard */,
 				1564C2DF24210D410079ED1C /* Info.plist */,
-				1564C2D724210D400079ED1C /* MEMO.xcdatamodeld */,
+				159CB18E242380AE004D2C39 /* MemoTableViewController.swift */,
 			);
 			path = MEMO;
+			sourceTree = "<group>";
+		};
+		159CB194242383DB004D2C39 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				1564C2D724210D400079ED1C /* MEMO.xcdatamodeld */,
+				159CB19024238357004D2C39 /* Memo+CoreDataClass.swift */,
+				159CB19124238357004D2C39 /* Memo+CoreDataProperties.swift */,
+				159CB19524238414004D2C39 /* CoreDataManager.swift */,
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,9 +161,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				159CB18F242380AE004D2C39 /* MemoTableViewController.swift in Sources */,
 				1564C2D324210D400079ED1C /* ViewController.swift in Sources */,
 				1564C2CF24210D400079ED1C /* AppDelegate.swift in Sources */,
+				159CB19224238357004D2C39 /* Memo+CoreDataClass.swift in Sources */,
 				1564C2D124210D400079ED1C /* SceneDelegate.swift in Sources */,
+				159CB19324238357004D2C39 /* Memo+CoreDataProperties.swift in Sources */,
+				159CB19624238414004D2C39 /* CoreDataManager.swift in Sources */,
 				1564C2D924210D400079ED1C /* MEMO.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
