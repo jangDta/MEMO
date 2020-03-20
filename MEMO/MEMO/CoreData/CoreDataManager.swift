@@ -18,7 +18,7 @@ class CoreDataManager {
     var memos: [Memo] = []
     
     // 메모 가져오기
-    func getMemos() -> [Memo] {
+    func getMemos() {
         let request: NSFetchRequest<Memo> = Memo.fetchRequest()
         
         let sortByDataDesc = NSSortDescriptor(key: "date", ascending: false)
@@ -30,7 +30,6 @@ class CoreDataManager {
             print(error)
         }
         
-        return memos
     }
     
     // 메모 추가하기
@@ -98,6 +97,6 @@ class CoreDataManager {
             }
         }
     }
-
+    
 }
 

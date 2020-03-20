@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--메모 작성-->
+        <!--새 메모-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MEMO" customModuleProvider="target" sceneMemberID="viewController">
@@ -32,7 +32,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="메모 작성" id="iNP-V5-nex">
+                    <navigationItem key="navigationItem" title="새 메모" id="iNP-V5-nex">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="GhV-p5-Egd">
                             <connections>
                                 <action selector="close:" destination="BYZ-38-t0r" id="K2l-x5-YRw"/>
@@ -44,6 +44,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="contentTextView" destination="4pI-K5-5Dn" id="Vdq-Vc-2AO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
