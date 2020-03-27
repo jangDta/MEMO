@@ -21,6 +21,8 @@ class MemoTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        print("viewDidLoad")
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
         
@@ -34,6 +36,17 @@ class MemoTableViewController: UITableViewController {
         print("willAppear")
         CoreDataManager.shared.getMemos()
         tableView.reloadData()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let cell = sender as? UITableViewCell,
+            let indexPath = tableView.indexPath(for: cell) {
+          let target = CoreDataManager.shared.memos[indexPath.row]
+          
+          if let vc = segue.destination as? DetailViewController {
+            vc.memo = target
+          }
+        }
     }
     
     // MARK: - Table view data source
@@ -90,16 +103,6 @@ class MemoTableViewController: UITableViewController {
      override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
      // Return false if you do not want the item to be re-orderable.
      return true
-     }
-     */
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
      }
      */
     
