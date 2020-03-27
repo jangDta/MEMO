@@ -22,6 +22,11 @@ class ViewController: UIViewController {
         
     }
     
+    func refresh() {
+        let vc = storyboard?.instantiateViewController(identifier: "MemoTableViewController") as! MemoTableViewController
+        vc.tableView.reloadData()
+    }
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
@@ -45,12 +50,14 @@ class ViewController: UIViewController {
             CoreDataManager.shared.saveContext { success in
                 if success {
                     print("편집 완료!")
+                    self.refresh()
                 }
             }
         } else {
             CoreDataManager.shared.addMemo(content: memoContent) { success in
                 if success {
                     print("새 메모 작성 완료!")
+                    self.refresh()
                 }
             }
         }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		13462880242D881200E43B09 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1346287F242D881200E43B09 /* DetailViewController.swift */; };
 		1564C2CF24210D400079ED1C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1564C2CE24210D400079ED1C /* AppDelegate.swift */; };
 		1564C2D124210D400079ED1C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1564C2D024210D400079ED1C /* SceneDelegate.swift */; };
 		1564C2D324210D400079ED1C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1564C2D224210D400079ED1C /* ViewController.swift */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1346287F242D881200E43B09 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		1564C2CB24210D400079ED1C /* MEMO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MEMO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1564C2CE24210D400079ED1C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1564C2D024210D400079ED1C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -47,6 +49,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		13462881242D8BF500E43B09 /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				1564C2D224210D400079ED1C /* ViewController.swift */,
+				159CB18E242380AE004D2C39 /* MemoTableViewController.swift */,
+				1346287F242D881200E43B09 /* DetailViewController.swift */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
 		1564C2C224210D400079ED1C = {
 			isa = PBXGroup;
 			children = (
@@ -66,15 +78,14 @@
 		1564C2CD24210D400079ED1C /* MEMO */ = {
 			isa = PBXGroup;
 			children = (
+				13462881242D8BF500E43B09 /* VC */,
 				159CB194242383DB004D2C39 /* CoreData */,
 				1564C2CE24210D400079ED1C /* AppDelegate.swift */,
 				1564C2D024210D400079ED1C /* SceneDelegate.swift */,
-				1564C2D224210D400079ED1C /* ViewController.swift */,
 				1564C2D424210D400079ED1C /* Main.storyboard */,
 				1564C2DA24210D410079ED1C /* Assets.xcassets */,
 				1564C2DC24210D410079ED1C /* LaunchScreen.storyboard */,
 				1564C2DF24210D410079ED1C /* Info.plist */,
-				159CB18E242380AE004D2C39 /* MemoTableViewController.swift */,
 			);
 			path = MEMO;
 			sourceTree = "<group>";
@@ -161,6 +172,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13462880242D881200E43B09 /* DetailViewController.swift in Sources */,
 				159CB18F242380AE004D2C39 /* MemoTableViewController.swift in Sources */,
 				1564C2D324210D400079ED1C /* ViewController.swift in Sources */,
 				1564C2CF24210D400079ED1C /* AppDelegate.swift in Sources */,

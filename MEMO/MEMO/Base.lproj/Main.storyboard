@@ -50,7 +50,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2658" y="115"/>
+            <point key="canvasLocation" x="2849" y="115"/>
         </scene>
         <!--메모-->
         <scene sceneID="Jsa-hy-Fd7">
@@ -84,6 +84,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="bNn-rB-24p" kind="show" id="zoP-ZI-ujp"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -92,7 +95,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="메모" id="fQQ-4A-hTB">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="EGq-iP-6XT">
+                        <barButtonItem key="rightBarButtonItem" systemItem="compose" id="EGq-iP-6XT">
                             <connections>
                                 <segue destination="Hiz-L8-nrj" kind="presentation" id="APs-tj-bGa"/>
                             </connections>
@@ -109,7 +112,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="LLB-S4-c1T" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="Hk9-7S-Hn3">
-                        <rect key="frame" x="0.0" y="44" width="375" height="96"/>
+                        <rect key="frame" x="0.0" y="44" width="375" height="104.33333333333334"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -137,7 +140,70 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="czN-4k-Z5o" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1810" y="115"/>
+            <point key="canvasLocation" x="1895" y="115"/>
+        </scene>
+        <!--메모보기-->
+        <scene sceneID="DrA-96-NgN">
+            <objects>
+                <viewController storyboardIdentifier="DetailViewController" id="bNn-rB-24p" customClass="DetailViewController" customModule="MEMO" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="c5b-5n-WqS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Mck-TY-cHq">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="729"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="detailCell" textLabel="RBG-wo-2cT" style="IBUITableViewCellStyleDefault" id="m1Z-i8-TQz">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="m1Z-i8-TQz" id="cAT-qt-G1n">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="RBG-wo-2cT">
+                                                    <rect key="frame" x="15" y="0.0" width="345" height="44"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ir1-S0-ekD">
+                                <rect key="frame" x="0.0" y="729" width="375" height="49"/>
+                                <items>
+                                    <barButtonItem systemItem="trash" id="fOH-pP-Q9x"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Olu-8g-jcR"/>
+                                    <barButtonItem systemItem="camera" id="VyI-D8-TYx"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="vP0-S3-N4g"/>
+                                    <barButtonItem systemItem="action" id="a5X-Px-c6Y"/>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="ir1-S0-ekD" firstAttribute="leading" secondItem="YC2-ke-cuO" secondAttribute="leading" id="1NK-u6-mYn"/>
+                            <constraint firstItem="Mck-TY-cHq" firstAttribute="top" secondItem="c5b-5n-WqS" secondAttribute="top" id="b2e-33-6bA"/>
+                            <constraint firstItem="ir1-S0-ekD" firstAttribute="top" secondItem="Mck-TY-cHq" secondAttribute="bottom" id="bMp-dg-ilA"/>
+                            <constraint firstItem="Mck-TY-cHq" firstAttribute="leading" secondItem="YC2-ke-cuO" secondAttribute="leading" id="bdz-TZ-Rlf"/>
+                            <constraint firstItem="ir1-S0-ekD" firstAttribute="bottom" secondItem="YC2-ke-cuO" secondAttribute="bottom" id="e85-nd-Q65"/>
+                            <constraint firstItem="ir1-S0-ekD" firstAttribute="trailing" secondItem="YC2-ke-cuO" secondAttribute="trailing" id="fJw-7H-ghF"/>
+                            <constraint firstItem="Mck-TY-cHq" firstAttribute="trailing" secondItem="YC2-ke-cuO" secondAttribute="trailing" id="teI-eR-baS"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="YC2-ke-cuO"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="메모보기" id="Zns-hG-V3u"/>
+                    <connections>
+                        <outlet property="tableView" destination="Mck-TY-cHq" id="5Ru-dJ-0a7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PPt-pk-cEb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1893.5999999999999" y="836.45320197044339"/>
         </scene>
     </scenes>
 </document>
